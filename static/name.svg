@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 32 40" x="0px" y="0px" fill="#FFFFFF">
+    <title>Name</title>
+    <circle cx="8" cy="11" r="4"/>
+    <path d="M10,16H6a5,5,0,0,0-5,5v4a1,1,0,0,0,1,1H14a1,1,0,0,0,1-1V21A5,5,0,0,0,10,16Z"/>
+    <path d="M30,15H18a1,1,0,0,1,0-2H30a1,1,0,0,1,0,2Z"/><path d="M30,19H18a1,1,0,0,1,0-2H30a1,1,0,0,1,0,2Z"/>
+    <path d="M24,23H18a1,1,0,0,1,0-2h6a1,1,0,0,1,0,2Z"/>
+</svg>
