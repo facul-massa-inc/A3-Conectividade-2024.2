@@ -17,7 +17,7 @@
     let innerWidth: number;
     
     onMount(() => {
-        socket = new WebSocket("ws://26.168.198.241:3000");
+        socket = new WebSocket("ws://192.99.78.17:1000");
 
         socket.addEventListener("message", (ev) => {
             let msg: MessageData;

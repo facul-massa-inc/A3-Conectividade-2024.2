@@ -3,7 +3,7 @@ import crypto from "crypto";
 import type { MessageData } from '../lib/lib';
 import { palavrasFeias } from '$lib/server/palavrasfeias';
 
-const server = new WebSocketServer({ port: 3000 });
+const server = new WebSocketServer({ port: 1000 });
 const palavrasFeiasRegex = new RegExp(palavrasFeias.join("|"), "gi");
 const salt = crypto.randomBytes(32);
 
