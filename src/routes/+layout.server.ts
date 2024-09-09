@@ -15,7 +15,9 @@ server.on("connection", (ws, req) => {
         parsedData.identifier = crypto.hash("sha256", Buffer.concat(
             [Buffer.from(<string>req.socket.remoteAddress), salt]), "base64"
         );
-        parsedData.message = parsedData.message.replace(palavrasFeiasRegex, s=>"*".repeat(s.length));
+        if(parsedData.message) {
+            parsedData.message = parsedData.message.replace(palavrasFeiasRegex, s=>"*".repeat(s.length));
+        }
         server.clients.forEach(client => client.send(JSON.stringify(parsedData)));
     });
 });

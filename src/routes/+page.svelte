@@ -79,7 +79,6 @@
     }
 
     let imageFiles: FileList;
-    let test: string;
     $: imageUpload(imageFiles);
     function imageUpload(files: FileList) {
         if(!browser || !files) return;
@@ -150,7 +149,7 @@
     .msg-input {
         padding-right: 50px;
     }
-    button{
+    button {
         flex: 0;
         padding: 12px 20px;
         border: none;
@@ -174,6 +173,7 @@
         word-wrap: break-word;
         background-color: rgba(60, 60, 60, 0.8);
         overflow: hidden;
+        flex-shrink: 0;
     }
     .message > img {
         object-fit: contain;
