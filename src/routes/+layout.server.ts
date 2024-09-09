@@ -1,10 +1,22 @@
-import { WebSocketServer } from 'ws';
+import { WebSocketServer, type AddressInfo } from 'ws';
+import crypto from "crypto";
+import type { MessageData } from '../lib/lib';
+import { palavrasFeias } from '$lib/server/palavrasfeias';
 
 const server = new WebSocketServer({ port: 3000 });
+const palavrasFeiasRegex = new RegExp(palavrasFeias.join("|"), "gi");
+const salt = crypto.randomBytes(32);
 
-server.on("connection", (ws) => {
+server.on("connection", (ws, req) => {
     
-    ws.on("message", (data) => {
-        server.clients.forEach(client => client.send(data.toString("utf-8")));
+    ws.on("message", (data) => { 
+        let parsedData: MessageData;
+        try { parsedData = JSON.parse(data.toString()) } catch(e) { return; };
+        parsedData.identifier = crypto.hash("sha256", Buffer.concat(
+            [Buffer.from(<string>req.socket.remoteAddress), salt]), "base64"
+        );
+        parsedData.message = parsedData.message.replace(palavrasFeiasRegex, s=>"*".repeat(s.length));
+        server.clients.forEach(client => client.send(JSON.stringify(parsedData)));
     });
 });
+

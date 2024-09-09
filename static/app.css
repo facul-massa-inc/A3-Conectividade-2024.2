@@ -4,3 +4,9 @@ html, body {
     width: 100%;
     height: 100%;
 }
+
+body {
+    display: flex;
+    flex-flow: column;
+    background: linear-gradient(to bottom right, #0d021d, #150725, #11021a, #0b000c);
+}
