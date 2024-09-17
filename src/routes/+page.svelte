@@ -223,7 +223,7 @@
         width: 40px;
         height: 40px;
         background-color: #6200ea; 
-        background-image: url("image.svg");
+        background-image: url("/image.svg");
         background-size: 90%, 90%;
         background-repeat: no-repeat;
         background-position-x: center;
@@ -299,7 +299,7 @@
             <input type="text" class="name-input" placeholder="Nome" bind:value={username}>
         {/if}
         <input type="text" class="msg-input" placeholder="Mensagem" on:keypress={inputKey} bind:value={value}>
-        <button class="icon-button media-button" on:click={()=>showMedia(true)}>
+        <button class="media-button" on:click={()=>showMedia(true)}>
             <div class="media-bar-container">
                 <div class="media-bar" bind:this={mediaBar}>
                     <input type="file" accept="image/*" bind:files={imageFiles} bind:this={mediaImageInput}>
