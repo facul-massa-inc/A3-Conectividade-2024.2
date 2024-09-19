@@ -17,7 +17,7 @@
     let innerWidth: number;
     
     onMount(() => {
-        socket = new WebSocket("ws://192.99.78.17:1000");
+        socket = new WebSocket("ws://127.0.0.1:1000");//"ws://192.99.78.17:1000");
 
         socket.addEventListener("message", (ev) => {
             let msg: MessageData;
@@ -95,6 +95,10 @@
             let media = <string>ev.target!.result;
             sendMessage(<MessageData>{message: value, username: username, media: media})
         }
+    }
+
+    function genColor(iden: string | undefined) {
+        return "#"+[...atob(<string>iden).substring(0,3)].map(s => s.charCodeAt(0).toString(16).padStart(2, "0")).join("");
     }
 </script>
 <style>
@@ -288,7 +292,7 @@
 <div class="chat" bind:this={chat}>
     {#each messages as message}
         <p class="message">
-            <b>{message.username}:</b> {#if message.message}{message.message}{/if} <small>&lt;{message.identifier}&gt;</small>
+            <b style="color: {genColor(message.identifier)};">{message.username}:</b> {#if message.message}{message.message}{/if} <small>&lt;{message.identifier}&gt;</small>
             {#if message.media}
                 <img src={message.media} alt="">
             {/if}
