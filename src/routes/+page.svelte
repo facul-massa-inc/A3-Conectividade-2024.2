@@ -108,7 +108,7 @@
         margin-top: auto;
         padding: 10px;
         border-top: 1px solid rgba(255, 255, 255, 0.2); 
-        background: rgba(18, 18, 18, 0.9); 
+        background: #212121; 
     }
     .chat {
         display: flex;
