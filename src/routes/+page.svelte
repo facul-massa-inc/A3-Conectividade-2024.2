@@ -245,6 +245,9 @@
         right: calc(50% - 20px);
         bottom: 100%;
     }
+    small {
+        color: gray;
+    }
     @media (max-width: 600px) {
         .icon-button, .name-input {
             border-radius: 50% !important;
