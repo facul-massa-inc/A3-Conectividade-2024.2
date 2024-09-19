@@ -28,4 +28,7 @@ export const palavrasFeias = [
     "arrombada",
     "bluezão",
     "intel",
+    "penis",
+    "xota",
+    "xereca",
 ];

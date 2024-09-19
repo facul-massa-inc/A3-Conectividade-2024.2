@@ -154,7 +154,7 @@
         padding: 12px 20px;
         border: none;
         border-radius: 8px;
-        background-color: #6200ea; 
+        background-color: #0025aa; 
         color: #fff;
         font-size: 1rem;
         cursor: pointer;
@@ -222,7 +222,7 @@
         border-radius: 8px;
         width: 40px;
         height: 40px;
-        background-color: #6200ea; 
+        background-color: #0025aa; 
         background-image: url("/image.svg");
         background-size: 90%, 90%;
         background-repeat: no-repeat;
@@ -265,7 +265,7 @@
         .name-input {
             flex: 0 !important;
             border: none !important;
-            background-color: #6200ea !important; 
+            background-color: #0025aa !important; 
         }
         .bytes-counter {
             margin: 0;

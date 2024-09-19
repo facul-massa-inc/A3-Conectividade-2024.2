@@ -8,5 +8,5 @@ html, body {
 body {
     display: flex;
     flex-flow: column;
-    background: linear-gradient(to bottom right, #0d021d, #150725, #11021a, #0b000c);
+    background: linear-gradient(to bottom, #5cc1fb, #3bc1e6);
 }
