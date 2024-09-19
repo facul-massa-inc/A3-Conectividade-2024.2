@@ -154,7 +154,7 @@
         padding: 12px 20px;
         border: none;
         border-radius: 8px;
-        background-color: #0025aa; 
+        background-color: #ff6f32; 
         color: #fff;
         font-size: 1rem;
         cursor: pointer;
@@ -174,6 +174,7 @@
         background-color: rgba(60, 60, 60, 0.8);
         overflow: hidden;
         flex-shrink: 0;
+        box-shadow: rgb(0 0 0 / 38%) 0px 4px 3px, rgb(255 255 255 / 12%) 0px -3px 6px
     }
     .message > img {
         object-fit: contain;
@@ -222,7 +223,7 @@
         border-radius: 8px;
         width: 40px;
         height: 40px;
-        background-color: #0025aa; 
+        background-color: #ff6f32; 
         background-image: url("/image.svg");
         background-size: 90%, 90%;
         background-repeat: no-repeat;
@@ -268,7 +269,7 @@
         .name-input {
             flex: 0 !important;
             border: none !important;
-            background-color: #0025aa !important; 
+            background-color: #ff6f32 !important; 
         }
         .bytes-counter {
             margin: 0;
